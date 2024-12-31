@@ -1,0 +1,25 @@
+Package: diario
+Type: Package
+Title: R Interface to the <https://diariodeobras.net> Application Interface
+Version: 0.1.0
+Date: 2025-01-01
+Authors@R: c(
+            person("Andre", "Leite", email = "leite@castlab.org", role = c("aut", "cre")),
+            person("Felipe", "Ferreira", email = "felipe.ferreira@semobi.pe.gov.br", role = "aut"),
+            person("Hugo", "Vaconcelos", email = "hugo.vasconcelos@ufpe.br", role = "aut"),
+            person("Diogo", "Bezerra", email = "diogo.bezerra@ufpe.br", role = "aut"),
+            person("Roger", "Azevedo", email = "roger.azevedo@tpfe.com.br", role = "aut")
+            )
+Description: Provides a set of functions for securely storing API tokens and interacting with the <https://diariodeobras.net> system. Includes convenient wrappers around the httr2 package to perform authenticated requests, retrieve project details, tasks, reports, and more. This package streamlines integration with Diario within R workflows.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+LazyData: true
+RoxygenNote: 7.3.2
+Imports:
+    tibble,
+    httr2,
+    glue,
+    keyring
+URL: <https://github.com/StrategicProjects/diario>, <https://monitoramento.sepe.pe.gov.br/diario>
+Config/Needs/website: tidyverse/tidytemplate
