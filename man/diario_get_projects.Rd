@@ -6,9 +6,6 @@
 \usage{
 diario_get_projects()
 }
-\arguments{
-\item{query}{A named list of query parameters (optional).}
-}
 \value{
 A tibble containing the projects data.
 }

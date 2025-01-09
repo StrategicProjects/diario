@@ -191,7 +191,6 @@ diario_get_entities <- function() {
 #'
 #' This function retrieves a list of projects from the Diario API.
 #'
-#' @param query A named list of query parameters (optional).
 #' @return A tibble containing the projects data.
 #' @examples
 #' \dontrun{

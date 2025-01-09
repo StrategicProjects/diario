@@ -19,7 +19,6 @@ RoxygenNote: 7.3.2
 Imports:
     tibble,
     httr2,
-    glue,
     keyring
 URL: <https://github.com/StrategicProjects/diario>, <https://monitoramento.sepe.pe.gov.br/diario>
 Config/Needs/website: tidyverse/tidytemplate
