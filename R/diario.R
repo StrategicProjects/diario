@@ -1,64 +1,68 @@
-#' Store the API token securely for Diario
+#' Store the API token for Diario
 #'
-#' This function securely stores the authentication token using the `keyring` package.
+#' This function stores the provided authentication token using the `keyring` package.
+#' If the token cannot be stored (for example, because the keyring is not accessible),
+#' it prints a message instead of throwing an error, and returns \code{FALSE}.
 #'
-#' @param token A non-empty character string containing the API token.
-#' @return No return value, called for side effects.
+#' @param token A character string containing the API token to be stored.
+#' @return \code{TRUE} (invisibly) if the token was stored successfully;
+#'   \code{FALSE} otherwise.
 #' @examples
-#' \donttest{
-#' \dontrun{
+#' # Attempt to store a token:
 #' diario_store_token("your-api-token")
-#' }
-#' }
 #' @export
 diario_store_token <- function(token) {
-  # Basic argument check
+  # Validate the token argument
   if (!is.character(token) || length(token) != 1L || !nzchar(token)) {
     stop("`token` must be a valid non-empty string of length 1.")
   }
 
-  # Attempt to store the token securely
-  tryCatch(
+  # Attempt to store the token
+  success <- tryCatch(
     {
       keyring::key_set_with_value(
         service = "DiarioAPI_Token",
         username = "global",
         password = token
       )
-      message("Token successfully stored.")
+      TRUE
     },
     error = function(e) {
-      stop(
-        "Failed to store the token. Make sure `keyring` is accessible.\n",
+      message(
+        "Could not store the token. Make sure `keyring` is accessible.\n",
         "Underlying error: ", conditionMessage(e)
       )
+      return(FALSE)
     }
   )
+
+  if (success) {
+    message("Token stored successfully.")
+  }
+
+  invisible(success)
 }
 
 #' Retrieve the API token for Diario
 #'
 #' This function retrieves the stored authentication token using the `keyring` package.
+#' If no valid token (or keyring) is found, it will return `NULL` and print a message
+#' in English indicating that no valid token was found.
 #'
-#' @return A character string containing the API token.
+#' @return A character string containing the API token, or `NULL` if no valid token is found.
 #' @examples
-#' \donttest{
-#' \dontrun{
 #' token <- diario_retrieve_token()
-#' }
-#' }
 #' @export
 diario_retrieve_token <- function() {
-  # Attempt to retrieve the token
   tryCatch(
     {
-      keyring::key_get(service = "DiarioAPI_Token", username = "global")
+      # Attempt to retrieve the token
+      token <- keyring::key_get(service = "DiarioAPI_Token", username = "global")
+      token
     },
     error = function(e) {
-      stop(
-        "Failed to retrieve the token. Make sure you have stored it using `diario_store_token`.\n",
-        "Underlying error: ", conditionMessage(e)
-      )
+      message("No valid token found.")
+      return(NULL)
     }
   )
 }
@@ -92,7 +96,6 @@ diario_perform_request <- function(endpoint,
   if (!is.character(method) || length(method) != 1L || !nzchar(method)) {
     stop("`method` must be a valid non-empty string of length 1 (e.g., 'GET').")
   }
-  # Optionally, verify that `method` is in an allowed set
   valid_methods <- c("GET", "POST", "PUT", "PATCH", "DELETE")
   if (!toupper(method) %in% valid_methods) {
     stop(
@@ -107,8 +110,12 @@ diario_perform_request <- function(endpoint,
     stop("`body` must be NULL or a list representing the JSON body.")
   }
 
-  # Get the stored token
+  # Retrieve the stored token
   token <- diario_retrieve_token()
+  if (is.null(token)) {
+    message("No valid token found. Please store your token with `diario_store_token()`.")
+    return(invisible(NULL))
+  }
 
   # Build the request
   base_url <- "https://apiexterna.diariodeobra.app/"
@@ -116,21 +123,15 @@ diario_perform_request <- function(endpoint,
   req <- httr2::request(url) |>
     httr2::req_headers(
       "token" = token,
-      "Content-Type"  = "application/json"
+      "Content-Type" = "application/json"
     )
 
-  # If there's a body, attach it as JSON
+  # Add query parameters if provided
   if (length(query) > 0) {
-    req <- req |>
-      httr2::req_url_query(query)
+    req <- req |> httr2::req_url_query(query)
   }
 
-  # If there's a body, attach it as JSON
-  if (!is.null(body)) {
-    req <- req |> httr2::req_body_json(body)
-  }
-
-  # If there's a body, attach it as JSON
+  # Attach JSON body if provided
   if (!is.null(body)) {
     req <- req |> httr2::req_body_json(body)
   }
@@ -148,10 +149,10 @@ diario_perform_request <- function(endpoint,
     }
   )
 
-  # Handle JSON responses (or error otherwise)
+  # Handle JSON responses or raise an error otherwise
   ct <- httr2::resp_content_type(response)
   if (grepl("application/json", tolower(ct), fixed = TRUE)) {
-    return(httr2::resp_body_json(response, simplifyVector = TRUE))
+    httr2::resp_body_json(response, simplifyVector = TRUE)
   } else {
     stop("Unexpected content type: ", ct)
   }
