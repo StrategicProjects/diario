@@ -10,6 +10,8 @@ and interacting with the **diariodeobras.net** system. It wraps common
 functionality (e.g., authentication, GET/POST requests) in convenient R
 functions, making it easier to integrate **Diario** within R workflows.
 
+[TABLE]
+
 ## Installation
 
 You can install the development version of `diario` from

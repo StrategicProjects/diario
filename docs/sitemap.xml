@@ -5,7 +5,6 @@
 <url><loc>https://monitoramento.sepe.pe.gov.br/diario/authors.html</loc></url>
 <url><loc>https://monitoramento.sepe.pe.gov.br/diario/index.html</loc></url>
 <url><loc>https://monitoramento.sepe.pe.gov.br/diario/news/index.html</loc></url>
-<url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/diario.html</loc></url>
 <url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/diario_get_company.html</loc></url>
 <url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/diario_get_entities.html</loc></url>
 <url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/diario_get_project_details.html</loc></url>
@@ -17,17 +16,6 @@
 <url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/diario_perform_request.html</loc></url>
 <url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/diario_retrieve_token.html</loc></url>
 <url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/diario_store_token.html</loc></url>
-<url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/get_company.html</loc></url>
-<url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/get_entities.html</loc></url>
-<url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/get_project_details.html</loc></url>
-<url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/get_projects.html</loc></url>
-<url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/get_report_details.html</loc></url>
-<url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/get_reports.html</loc></url>
-<url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/get_task_details.html</loc></url>
-<url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/get_task_list.html</loc></url>
 <url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/index.html</loc></url>
-<url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/perform_request.html</loc></url>
-<url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/retrieve_token.html</loc></url>
-<url><loc>https://monitoramento.sepe.pe.gov.br/diario/reference/store_token.html</loc></url>
 </urlset>
 
