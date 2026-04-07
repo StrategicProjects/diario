@@ -1,24 +1,26 @@
 Package: diario
 Type: Package
 Title: 'R' Interface to the 'Diariodeobras' Application
-Version: 0.1.0
-Date: 2025-01-09
+Version: 0.1.1
+Date: 2026-04-07
 Authors@R: c(
             person("Andre", "Leite", email = "leite@castlab.org", role = c("aut", "cre")),
-            person("Felipe", "Ferreira", email = "felipe.ferreira@semobi.pe.gov.br", role = "aut"),
             person("Hugo", "Vaconcelos", email = "hugo.vasconcelos@ufpe.br", role = "aut"),
             person("Diogo", "Bezerra", email = "diogo.bezerra@ufpe.br", role = "aut"),
-            person("Roger", "Azevedo", email = "roger.azevedo@tpfe.com.br", role = "aut")
+            person("Marcos", "Wasilew", email = "marcos.wasilew@gmail.com", role = "aut"),
+            person("Carlos", "Amorin", email = "carlos.agaf@ufpe.br", role = "aut")
             )
 Description: Provides a set of functions for securely storing 'API' tokens and interacting with the <https://diariodeobras.net> system. Includes convenient wrappers around the 'httr2' package to perform authenticated requests, retrieve project details, tasks, reports, and more. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-LazyData: true
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
+Depends: R (>= 4.1.0)
 Imports:
+    cli,
     tibble,
     httr2,
     keyring
-URL: <https://github.com/StrategicProjects/diario>
+URL: https://github.com/StrategicProjects/diario
+BugReports: https://github.com/StrategicProjects/diario/issues
 Config/Needs/website: tidyverse/tidytemplate
