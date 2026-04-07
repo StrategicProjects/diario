@@ -21,6 +21,6 @@ Imports:
     tibble,
     httr2,
     keyring
-URL: https://github.com/StrategicProjects/diario
+URL: https://github.com/StrategicProjects/diario, https://strategicprojects.github.io/diario/
 BugReports: https://github.com/StrategicProjects/diario/issues
 Config/Needs/website: tidyverse/tidytemplate
