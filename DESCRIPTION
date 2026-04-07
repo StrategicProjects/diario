@@ -8,7 +8,9 @@ Authors@R: c(
             person("Hugo", "Vaconcelos", email = "hugo.vasconcelos@ufpe.br", role = "aut"),
             person("Diogo", "Bezerra", email = "diogo.bezerra@ufpe.br", role = "aut"),
             person("Marcos", "Wasilew", email = "marcos.wasilew@gmail.com", role = "aut"),
-            person("Carlos", "Amorin", email = "carlos.agaf@ufpe.br", role = "aut")
+            person("Carlos", "Amorin", email = "carlos.agaf@ufpe.br", role = "aut"),
+            person("Felipe", "Ferreira", email = "felipe.ferreira@semobi.pe.gov.br", role = "aut"),
+            person("Roger", "Azevedo", email = "roger.azevedo@tpfe.com.br", role = "aut")
             )
 Description: Provides a set of functions for securely storing 'API' tokens and interacting with the <https://diariodeobras.net> system. Includes convenient wrappers around the 'httr2' package to perform authenticated requests, retrieve project details, tasks, reports, and more. 
 License: MIT + file LICENSE
