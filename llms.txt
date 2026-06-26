@@ -10,6 +10,11 @@ and interacting with the **diariodeobras.net** system. It wraps common
 functionality (e.g., authentication, GET/POST requests) in convenient R
 functions, making it easier to integrate **Diario** within R workflows.
 
+> 🐍 **Using Python?** A port of this package is available as
+> [**diariopy**](https://github.com/StrategicProjects/diariopy)
+> ([PyPI](https://pypi.org/project/diariopy/) ·
+> [docs](https://strategicprojects.github.io/diariopy/)).
+
 [TABLE]
 
 ## Installation
