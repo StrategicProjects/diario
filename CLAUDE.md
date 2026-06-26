@@ -6,6 +6,13 @@ performs authenticated requests, returning projects, tasks, reports, etc.
 
 Published on CRAN. Maintainer: André Leite.
 
+**Sibling:** a Python port lives at `../diariopy` (PyPI `diariopy`, repo
+`StrategicProjects/diariopy`). Keep behaviour in parity when changing either. Both
+READMEs cross-link.
+
+**Current status (2026-06-26):** v0.1.2 submitted to CRAN, awaiting review (0.1.1 is
+the live version). Working tree is clean.
+
 ## Layout
 
 - `R/diario.R` — the entire implementation (all exported functions live here).
