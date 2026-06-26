@@ -10,8 +10,8 @@ Published on CRAN. Maintainer: André Leite.
 `StrategicProjects/diariopy`). Keep behaviour in parity when changing either. Both
 READMEs cross-link.
 
-**Current status (2026-06-26):** v0.1.2 submitted to CRAN, awaiting review (0.1.1 is
-the live version). Working tree is clean.
+**Current status:** v0.1.2 is live on CRAN (accepted 2026-06-26). Next dev cycle
+starts from 0.1.2.
 
 ## Layout
 
