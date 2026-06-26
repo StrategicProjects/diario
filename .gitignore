@@ -1,4 +1,6 @@
 .DS_Store
+# Claude Code local settings (may contain secrets)
+.claude/
 # History files
 .Rhistory
 .Rapp.history
@@ -47,4 +49,7 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 docs.zip
+
+# pkgdown site is built and deployed to the gh-pages branch by GitHub Actions
+docs/
 .DS_Store

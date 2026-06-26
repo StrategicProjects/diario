@@ -1,32 +1,33 @@
+## Submission
+
+This is a minor update of the 'diario' package (0.1.1 -> 0.1.2).
+
+### Changes in this version
+
+* Fixed a bug where query parameters were not passed correctly to
+  `httr2::req_url_query()`, so `diario_get_reports()`'s `limit`/`order`
+  arguments now work as documented.
+* Argument validators now reject missing values (`NA`).
+* `diario_get_task_list()` now returns the schedule items (one row per task)
+  instead of the raw API envelope.
+* HTTP errors now surface the message returned by the API, and empty response
+  bodies are handled gracefully.
+* The API base URL is now configurable via the `diario.base_url` option.
+* Added a `testthat` test suite (network mocked, no internet access required).
+
+See `NEWS.md` for the full list of changes.
+
 ## R CMD check results
 
-0 errors ✔ | 0 warnings ✔ | 0 notes ✔
+0 errors | 0 warnings | 0 notes
 
-* This is a new release.
+## Test environments
 
-## Response to Uwe Ligges’ Comments
+* local macOS, R 4.6.0, R CMD check --as-cran: 0 errors | 0 warnings | 0 notes
 
-1.	Possible Typo in the DESCRIPTION
-  *	The term httr has been corrected to httr2.
+## Notes
 
-2. Links in the Title
-	* It has been updated to remove any links.
-
-Thank you for your feedback!
-
-## Response to Konstanze Lauseker
-
-
-1. Please always write package names, software names and API (application
-    programming interface) names in single quotes in title and description.
-    e.g: --> 'Diario'
-    Please note that package names are case sensitive.
-  * The Description has been updated to comply.
-  
-2. Please unwrap the examples if that is feasible and if they can be
-    executed in < 5 sec for each Rd file or create additionally small toy
-    examples to allow automatic testing.
-  * We removed \donttest{} and \dontrun{} from diario_store_token and diario_retrieve_token. 	For the other functions, because they depend on valid credentials and/or 
-	  external services, we kept their examples in \donttest{} or \dontrun{} to 
-	  avoid potential runtime or dependency issues on CRAN's test systems.
-
+* Examples that require a valid authentication token and the external Diario
+  service are wrapped in `\dontrun{}`. The bundled `testthat` tests mock all
+  network access and do not contact the external API, so they run without
+  internet or credentials.

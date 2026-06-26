@@ -1,14 +1,14 @@
 Package: diario
 Type: Package
 Title: 'R' Interface to the 'Diariodeobras' Application
-Version: 0.1.1
-Date: 2026-04-07
+Version: 0.1.2
+Date: 2026-06-25
 Authors@R: c(
             person("Andre", "Leite", email = "leite@castlab.org", role = c("aut", "cre")),
-            person("Hugo", "Vaconcelos", email = "hugo.vasconcelos@ufpe.br", role = "aut"),
+            person("Hugo", "Vasconcelos", email = "hugo.vasconcelos@ufpe.br", role = "aut"),
             person("Diogo", "Bezerra", email = "diogo.bezerra@ufpe.br", role = "aut"),
             person("Marcos", "Wasilew", email = "marcos.wasilew@gmail.com", role = "aut"),
-            person("Carlos", "Amorin", email = "carlos.agaf@ufpe.br", role = "aut"),
+            person("Carlos", "Amorim", email = "carlos.agaf@ufpe.br", role = "aut"),
             person("Felipe", "Ferreira", email = "felipe.ferreira@semobi.pe.gov.br", role = "aut"),
             person("Roger", "Azevedo", email = "roger.azevedo@tpfe.com.br", role = "aut")
             )
@@ -16,13 +16,18 @@ Description: Provides a set of functions for securely storing 'API' tokens and i
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
 Depends: R (>= 4.1.0)
 Imports:
     cli,
     tibble,
     httr2,
     keyring
+Suggests:
+    testthat (>= 3.0.0),
+    httptest2,
+    withr
 URL: https://github.com/StrategicProjects/diario, https://strategicprojects.github.io/diario/
 BugReports: https://github.com/StrategicProjects/diario/issues
 Config/Needs/website: tidyverse/tidytemplate
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.0.0
