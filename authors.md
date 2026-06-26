@@ -19,7 +19,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/StrategicProjects/diario/blob/HEAD/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/StrategicProjects/diario/blob/main/DESCRIPTION)
 
 Leite A, Vasconcelos H, Bezerra D, Wasilew M, Amorim C, Ferreira F,
 Azevedo R (2026). *diario: 'R' Interface to the 'Diariodeobras'
