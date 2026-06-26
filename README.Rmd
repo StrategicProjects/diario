@@ -23,6 +23,8 @@ knitr::opts_chunk$set(
 
 **diario** provides a set of functions for securely storing API tokens and interacting with the **diariodeobras.net** system. It wraps common functionality (e.g., authentication, GET/POST requests) in convenient R functions, making it easier to integrate **Diario** within R workflows.
 
+> 🐍 **Using Python?** A port of this package is available as [**diariopy**](https://github.com/StrategicProjects/diariopy) ([PyPI](https://pypi.org/project/diariopy/) · [docs](https://strategicprojects.github.io/diariopy/)).
+
 <table class="important-banner"><tr><td>
 &#x2755; <strong class="important-title">Disclaimer</strong><br>
 This package acts as a wrapper for the API provided by the
