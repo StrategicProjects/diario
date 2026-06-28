@@ -2,6 +2,8 @@
 
 ## diario 0.1.2
 
+CRAN release: 2026-06-26
+
 ### Bug fixes
 
 - Fixed a bug where query parameters were passed to
