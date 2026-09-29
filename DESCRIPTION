@@ -4,7 +4,7 @@ Title: 'R' Interface to the 'Diariodeobras' Application
 Version: 0.1.2
 Date: 2026-06-25
 Authors@R: c(
-            person("Andre", "Leite", email = "leite@castlab.org", role = c("aut", "cre")),
+            person("André", "Leite", email = "leite@castlab.org", role = c("aut", "cre")),
             person("Hugo", "Vasconcelos", email = "hugo.vasconcelos@ufpe.br", role = "aut"),
             person("Diogo", "Bezerra", email = "diogo.bezerra@ufpe.br", role = "aut"),
             person("Marcos", "Wasiliew", email = "marcos.wasiliew@gmail.com", role = "aut",
