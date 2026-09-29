@@ -2,7 +2,7 @@
 
 ## Authors
 
-- **Andre Leite**. Author, maintainer.
+- **André Leite**. Author, maintainer.
 
 - **Hugo Vasconcelos**. Author.
 
@@ -31,7 +31,7 @@ Azevedo R, Nascimento Barreto J (2026). *diario: 'R' Interface to the
 
     @Manual{,
       title = {diario: 'R' Interface to the 'Diariodeobras' Application},
-      author = {Andre Leite and Hugo Vasconcelos and Diogo Bezerra and Marcos Wasiliew and Carlos Amorim and Felipe Ferreira and Roger Azevedo and Júlia {Nascimento Barreto}},
+      author = {André Leite and Hugo Vasconcelos and Diogo Bezerra and Marcos Wasiliew and Carlos Amorim and Felipe Ferreira and Roger Azevedo and Júlia {Nascimento Barreto}},
       year = {2026},
       note = {R package version 0.1.2},
       url = {https://github.com/StrategicProjects/diario},
